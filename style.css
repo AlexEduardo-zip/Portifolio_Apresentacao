@@ -658,10 +658,10 @@ section h3.section-subheading {
 }
 
 section#contact {
-  background-color: #222;
-  background-image: url(https://www.ceupe.com/images/easyblog_articles/3583/b2ap3_large_profesion-de-programador-web.jpg);
+  background-image: url(https://alexrosa.net/wp-content/uploads/2016/07/wallpaper_1366x768_workstation-2.jpg);
   background-position: center;
   background-repeat: no-repeat;
+  background-size: cover;
 }
 
 section#contact .section-heading {
