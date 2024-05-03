@@ -212,12 +212,13 @@
                   <i class="fa fa-plus fa-3x"></i>
                 </div>
               </div>
-              <img src="https://www.guiadasemana.com.br/contentFiles/image/opt_w1280h720/2017/03/FEA/54341_poker.jpg"
+              <img
+                src="https://media.licdn.com/dms/image/C5612AQFsQJJuT8Q7Pg/article-cover_image-shrink_720_1280/0/1640104665860?e=2147483647&v=beta&t=4DG7sSo_RpDMWgp0jcMkX9JsORXrbsWjJfKrl8VGW6o"
                 class="img-responsive" alt="">
             </a>
             <div class="portfolio-caption">
-              <h4>Contabilizador de jogadas de Poker</h4>
-              <p class="text-muted">Estrutura de Dados - Lista Encadeada</p>
+              <h4>Data Science for NBA Champion</h4>
+              <p class="text-muted">Regressão Linear com Python e Pandas utilizando dados da NBA</p>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 portfolio-item">
@@ -271,11 +272,12 @@
                   <i class="fa fa-plus fa-3x"></i>
                 </div>
               </div>
-              <img src="https://emdiabetes.com.br/wp-content/uploads/2017/09/breve.jpg" class="img-responsive" alt="">
+              <img src="https://www.guiadasemana.com.br/contentFiles/image/opt_w1280h720/2017/03/FEA/54341_poker.jpg"
+                class="img-responsive" alt="">
             </a>
             <div class="portfolio-caption">
-              <h4>Em Breve</h4>
-              <p class="text-muted">Logo, Logo, mais projetos...</p>
+              <h4>Contabilizador de jogadas de Poker</h4>
+              <p class="text-muted">Estrutura de Dados - Lista Encadeada</p>
             </div>
           </div>
         </div>
@@ -612,17 +614,217 @@
           <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
               <div class="modal-body">
-                <h2>Project Heading</h2>
-                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                <img class="img-responsive img-centered"
-                  src="https://unsplash.imgix.net/44/9s1lvXLlSbCX5l3ZaYWP_hdr-1.jpg?q=75&w=1080&h=1080&fit=max&fm=jpg&auto=format&s=f0a1db79752dbb04ec6d2aab7d17c7b0"
-                  alt="">
-                <p><a href="https://designmodo.com/startup/?u=787">Startup Framework</a> is a website builder for
-                  professionals. Startup Framework contains components and complex blocks (PSD+HTML Bootstrap themes and
-                  templates) which can easily be integrated into almost any design. All of these components are made in
-                  the same style, and can easily be integrated into projects, allowing you to create hundreds of
-                  solutions for your future projects.</p>
-                <p>You can preview Startup Framework <a href="https://designmodo.com/startup/?u=787">here</a>.</p>
+                <h2>Análise de Regressão Linear na NBA</h2>
+                <p>Neste projeto, conduziremos uma análise de regressão linear para investigar a relação entre as
+                  estatísticas de desempenho de times da NBA durante a temporada regular e a quantidade de vitórias
+                  nos playoffs. A pergunta central é: <strong>Será que o desempenho de um time durante a temporada
+                    regular
+                    pode fornecer insights sobre sua performance nas partidas eliminatórias?</strong></p>
+                <p>Vamos explorar a possibilidade de prever o número de vitórias nos playoffs com base em diversas
+                  estatísticas das equipes durante a temporada regular. A utilização da regressão linear nos permitirá
+                  avaliar a existência de uma relação linear entre essas variáveis e, potencialmente, fazer previsões
+                  sobre o sucesso de um time nos playoffs com base em seu desempenho anterior.</p>
+
+                <h2>Limpeza de Dados na Análise</h2>
+                <p>Antes de prosseguir com a análise, realizamos uma etapa de limpeza de dados. Durante essa fase,
+                  foram removidas colunas consideradas irrelevantes, tratadas colunas com valores ausentes (NaN) e
+                  outras ações para garantir a qualidade dos dados.</p>
+                <p>Os dados utilizados foram coletados do site <a
+                    href="https://www.basketball-reference.com/">Basketball-Reference</a>, abrangendo todas as
+                  temporadas de
+                  2003 a 2022. Essas informações foram consolidadas em um extenso dataframe, contendo estatísticas
+                  relevantes das equipes durante a temporada regular da NBA.</p>
+                <p>Além disso, uma coluna adicional foi criada para representar a quantidade de vitórias que cada time
+                  obteve nos playoffs em determinada temporada. Essa abordagem permitirá uma análise mais profunda da
+                  relação entre o desempenho na temporada regular e o sucesso nos playoffs ao longo dos anos.</p>
+                <img class="img-responsive" alt="Photo by Basketball Reference on December 18, 2023."
+                  src="https://i.ytimg.com/vi/hoFiiEzpJxI/maxresdefault.jpg">
+                <h2>Seleção de Estatísticas com Correlação Significativa</h2>
+                <p>Com base na análise da correlação de Pearson, optamos por selecionar apenas as estatísticas que
+                  apresentam uma correlação inferior a -0.20. Vale ressaltar que a relação é negativa devido ao
+                  ranqueamento dos dados, onde o melhor time possui o rank 1 nas estatísticas e, consequentemente,
+                  mais vitórias nos playoffs.</p>
+                <img src="https://iili.io/JgtGxHl.md.png" alt="Correlação de Perason">
+                <p>Grafico de correlação</p>
+                <p>Essa escolha visa focar nas variáveis que têm uma associação mais forte e inversa com a quantidade
+                  de vitórias nos playoffs. A partir desta seleção, podemos direcionar nossa atenção para as
+                  estatísticas que demonstram um impacto mais significativo no sucesso das equipes durante as partidas
+                  eliminatórias.</p>
+                <p>A próxima etapa consistirá em utilizar essas estatísticas selecionadas para construir e treinar um
+                  modelo de regressão linear, a fim de explorar mais profundamente a relação entre essas variáveis e
+                  as vitórias nos playoffs. Essa abordagem proporcionará insights valiosos para entender como o
+                  desempenho das equipes durante a temporada regular pode influenciar seu sucesso nas fases decisivas
+                  do campeonato.</p>
+
+                <h2>Visualização de Dados</h2>
+                <p>Para uma compreensão mais clara das relações entre as variáveis selecionadas, também realizamos
+                  visualizações gráficas. Gráficos de dispersão e outros métodos de visualização nos ajudam a
+                  identificar padrões e tendências nos dados, auxiliando na interpretação dos resultados da análise.
+                </p>
+                <img src="https://iili.io/JgtNWFt.md.png" alt="Erro quadratico medio">
+                <p>Erro quadratico medio</p>
+
+                <h2>Construção e Avaliação do Modelo de Regressão Linear</h2>
+                <p>Após a seleção das variáveis e a preparação dos dados, construímos um modelo de regressão linear
+                  para prever o número de vitórias nos playoffs com base nas estatísticas da temporada regular.
+                  Utilizamos uma abordagem de validação cruzada para avaliar a precisão do modelo e identificar
+                  possíveis problemas de overfitting.</p>
+                <img src="https://iili.io/JgtSmfR.md.png" alt="Comparação de resultado previsto e real">
+                <p>Comparação de resultado previsto e real</p>
+
+                <p>Os resultados da validação cruzada mostraram que o modelo apresenta uma boa capacidade de
+                  generalização e pode ser utilizado para fazer previsões sobre o sucesso de um time nos playoffs com
+                  base em seu desempenho durante a temporada regular. Além disso, realizamos uma análise de resíduos
+                  para verificar a adequação do modelo aos dados.</p>
+
+                <h2>Resultados da Temporada 2024</h2>
+                <p>Nesta temporada, aplicamos o modelo de regressão linear desenvolvido neste estudo para prever o
+                  número de vitórias nos playoffs para cada equipe. Com base nas previsões do modelo, os times foram
+                  classificados de acordo com a quantidade de vitórias previstas.</p>
+                <p>Os resultados dessa classificação podem ser encontrados na tabela abaixo:</p>
+
+                <table>
+                  <thead>
+                    <tr>
+                      <th style="width: 10%; text-align: center;">Posição</th>
+                      <th style="width: 60%; text-align: center;">Time</th>
+                      <th style="width: 30%; text-align: center;">Vitórias Previstas</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td>Boston Celtics</td>
+                      <td>12.353180</td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td>Oklahoma City Thunder</td>
+                      <td>11.309869</td>
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td>Minnesota Timberwolves</td>
+                      <td>10.026657</td>
+                    </tr>
+                    <tr>
+                      <td>4</td>
+                      <td>Denver Nuggets</td>
+                      <td>9.480660</td>
+                    </tr>
+                    <tr>
+                      <td>5</td>
+                      <td>New York Knicks</td>
+                      <td>8.059477</td>
+                    </tr>
+                    <tr>
+                      <td>6</td>
+                      <td>New Orleans Pelicans</td>
+                      <td>7.369391</td>
+                    </tr>
+                    <tr>
+                      <td>7</td>
+                      <td>Los Angeles Clippers</td>
+                      <td>6.767119</td>
+                    </tr>
+                    <tr>
+                      <td>8</td>
+                      <td>Philadelphia 76ers</td>
+                      <td>5.205623</td>
+                    </tr>
+                    <tr>
+                      <td>9</td>
+                      <td>Phoenix Suns</td>
+                      <td>4.865767</td>
+                    </tr>
+                    <tr>
+                      <td>10</td>
+                      <td>Indiana Pacers</td>
+                      <td>4.367142</td>
+                    </tr>
+                    <tr>
+                      <td>11</td>
+                      <td>Golden State Warriors</td>
+                      <td>2.757697</td>
+                    </tr>
+                    <tr>
+                      <td>12</td>
+                      <td>Milwaukee Bucks</td>
+                      <td>2.440246</td>
+                    </tr>
+                    <tr>
+                      <td>13</td>
+                      <td>Cleveland Cavaliers</td>
+                      <td>1.027114</td>
+                    </tr>
+                    <tr>
+                      <td>14</td>
+                      <td>Dallas Mavericks</td>
+                      <td>0.553951</td>
+                    </tr>
+                    <tr>
+                      <td>15</td>
+                      <td>Orlando Magic</td>
+                      <td>-1.155699</td>
+                    </tr>
+                    <tr>
+                      <td>16</td>
+                      <td>Miami Heat</td>
+                      <td>-2.319264</td>
+                    </tr>
+                    <tr>
+                      <td>17</td>
+                      <td>Sacramento Kings</td>
+                      <td>-2.619276</td>
+                    </tr>
+                    <tr>
+                      <td>18</td>
+                      <td>Houston Rockets</td>
+                      <td>-4.115381</td>
+                    </tr>
+                    <tr>
+                      <td>19</td>
+                      <td>Los Angeles Lakers</td>
+                      <td>-4.190738</td>
+                    </tr>
+                    <tr>
+                      <td>20</td>
+                      <td>Chicago Bulls</td>
+                      <td>-5.573995</td>
+                    </tr>
+                    <tr>
+                      <td>21</td>
+                      <td>Atlanta Hawks</td>
+                      <td>-6.504569</td>
+                    </tr>
+                  </tbody>
+                </table><br><br>
+                <p>Observa-se que a diferença entre o número real de vitórias e o número previsto pelo modelo varia,
+                  podendo atingir valores negativos. Isso ocorre porque o modelo é uma simplificação do mundo real e não
+                  consegue capturar todas as nuances do desempenho das equipes.</p>
+                <p>Apesar disso, o modelo de regressão linear desenvolvido nesta análise pode ser uma ferramenta valiosa
+                  para prever o sucesso de um time nos playoffs com base em seu desempenho durante a temporada regular.
+                  Além disso, esta análise fornece insights úteis para treinadores, gerentes de equipe e outros
+                  profissionais interessados em entender melhor os fatores que influenciam o desempenho das equipes da
+                  NBA nos playoffs.</p>
+
+
+
+                <h2>Conclusão</h2>
+                <p>Nesta análise, exploramos a relação entre o desempenho das equipes da NBA durante a temporada
+                  regular e suas vitórias nos playoffs. Por meio de uma abordagem sistemática que envolveu limpeza de
+                  dados, seleção de variáveis, visualização e construção de modelos, pudemos identificar padrões e
+                  tendências nos dados.</p>
+                <p>O modelo de regressão linear desenvolvido nesta análise pode ser uma ferramenta valiosa para prever
+                  o sucesso de um time nos playoffs com base em seu desempenho durante a temporada regular. Além
+                  disso, esta análise fornece insights úteis para treinadores, gerentes de equipe e outros
+                  profissionais interessados em entender melhor os fatores que influenciam o desempenho das equipes da
+                  NBA nos playoffs.</p>
+                <h3>Veja em mais detalhes a implementação desse modelo e todos os testes no link abaixo</h3>
+
+                <a href="https://github.com/AlexEduardo-zip/ICD-NBA-data-analysis/blob/main/Regressao%20Linear%202024.ipynb"
+                  target="_blank"><button class="btn btn-info">Ver Notebook no GitHub</button></a><br><br><br>
+
                 <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close
                   Project</button>
               </div>
